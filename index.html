@@ -4,35 +4,30 @@
 	  
     <script src="https://web-chat.nativechat.com/2.26.0/sdk/nativechat.js"></script>
     <link href="https://web-chat.nativechat.com/2.26.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
-    <div id="ID-of-the-element-that-contains-the-chat-widget"></div>
     <script>
-	    var googleApiKey = "your-google-maps-API-key";
-	  var chatSettings = {
-		bot: {
-		  id: "1052c047e9ea4ebd8cacf28e"
-		},
-		channel: {
-		  id: "7552d801-2977-47c6-920b-4850a8c25042",
-		  token: "4d064057-4793-4049-a628-f1efc9fb2ac8"
-		},
-		googleApiKey,
-		session: {
-		  clear: true
-		}
-	  };
+  var chatSettings = {
+    bot: {
+      id: "1052c047e9ea4ebd8cacf28e"
+    },
+    channel: {
+      id: "7552d801-2977-47c6-920b-4850a8c25042",
+      token: "4d064057-4793-4049-a628-f1efc9fb2ac8"
+    },
+    googleApiKey: "your-google-maps-API-key",
+    session: {
+      clear: true
+    }
+  };
 
-	  const load = () => {
-		  window.NativeChat.load({
-		  id: "kcChatWindow",
-		  origin: "",
-		  display: {
-			mode: "modal"
-		  },
-		  chat: chatSettings
-		});
-	  };
-	  window.onload = load;
-	</script>
+  window.NativeChat.load({
+    id: "kcChatWindow",
+    origin: "",
+    display: {
+        mode: "modal"
+    },
+    chat: chatSettings
+  });
+</script>
 	</head>
 	<body>
 	</body>
