@@ -2,37 +2,37 @@
 	<head>
 	  <title>NativeChat page</title>
 	  
-    <script src="http://localhost:5500/nativechat.js"></script>
-    <link href="http://localhost:5500/nativechat.css" rel="stylesheet" type="text/css">
-    
+    <script src="https://web-chat.nativechat.com/2.2.0/sdk/nativechat.js"></script>
+    <link href="https://web-chat.nativechat.com/2.2.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
+    <div id="ID-of-the-element-that-contains-the-chat-widget"></div>
+    <script>
+	  var chatSettings = {
+		bot: {
+		  id: "d57d750c4a664428afeaea24"
+		},
+		channel: {
+		  id: "7346a5b2-3370-4cdd-b647-3ec39293295b",
+		  token: "8bc8ae1f-4aed-45ef-aad1-fff126b91033"
+		},
+		googleApiKey: "your-google-maps-API-key",
+		session: {
+		  clear: true
+		}
+	  };
+	  const load = () => {
+		  window.NativeChat.load({
+		  id: "kcChatWindow",
+		  origin: "",
+		  display: {
+			mode: "inline",
+			containerId: "ID-of-the-element-that-contains-the-chat-widget"
+		  },
+		  chat: chatSettings
+		});
+	  };
+	  window.onload = load;
+	</script>
 	</head>
 	<body>
-		 <p>Test</p>
-		
 	</body>
-	<script>
-		var googleApiKey = "your-google-maps-API-key";
-  var chatSettings = {
-    bot: {
-      id: "1052c047e9ea4ebd8cacf28e"
-    },
-    channel: {
-      id: "7552d801-2977-47c6-920b-4850a8c25042",
-      token: "4d064057-4793-4049-a628-f1efc9fb2ac8"
-    },
-    googleApiKey,
-    session: {
-      clear: true
-    }
-  };
-
-  window.NativeChat.load({
-    id: "kcChatWindow",
-    origin: "",
-    display: {
-        mode: "modal"
-    },
-    chat: chatSettings
-  });
-</script>
 </html>
